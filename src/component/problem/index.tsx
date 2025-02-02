@@ -63,7 +63,7 @@ function LanguageConfig(props: { language: Language }) {
                 },
                 {
                   key: 'append',
-                  label: '附加 - 前缀',
+                  label: '附加 - 后缀',
                   children: <div>{data.append}</div>,
                 },
               ]}
