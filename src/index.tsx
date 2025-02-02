@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import 'normalize.css';
 import { App } from './app';
-import './test.css';
 
 const appEl = document.querySelector('#app')!;
 

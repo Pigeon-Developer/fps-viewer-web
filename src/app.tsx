@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from 'antd';
+import { Upload } from './component/upload/upload';
 
 export function App() {
-  return <Button>Hello World</Button>;
+  return <Upload />;
 }

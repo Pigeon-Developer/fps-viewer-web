@@ -2,6 +2,9 @@ const { rspack } = require('@rspack/core');
 const { defineConfig } = require('@rspack/cli');
 
 const config = defineConfig({
+  experiments: {
+    css: true,
+  },
   entry: {
     main: './src/index.tsx',
   },
@@ -33,13 +36,8 @@ const config = defineConfig({
       },
       {
         test: /\.less$/i,
-        type: 'javascript/auto',
-        use: [rspack.CssExtractRspackPlugin.loader, 'css-loader', 'less-loader'],
-      },
-      {
-        test: /\.css$/i,
-        type: 'javascript/auto',
-        use: [rspack.CssExtractRspackPlugin.loader, 'css-loader'],
+        type: 'css/auto',
+        use: ['less-loader'],
       },
     ],
   },
@@ -50,7 +48,6 @@ const config = defineConfig({
     new rspack.HtmlRspackPlugin({
       template: 'public/main.html',
     }),
-    new rspack.CssExtractRspackPlugin({}),
   ],
 });
 module.exports = config;
