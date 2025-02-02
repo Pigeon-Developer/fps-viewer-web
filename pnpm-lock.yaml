@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@nanostores/react':
+        specifier: ^0.8.4
+        version: 0.8.4(nanostores@0.11.3)(react@18.3.1)
       antd:
         specifier: ^5.23.3
         version: 5.23.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      nanostores:
+        specifier: ^0.11.3
+        version: 0.11.3
       normalize.css:
         specifier: ^8.0.1
         version: 8.0.1
@@ -153,6 +159,13 @@ packages:
 
   '@module-federation/webpack-bundler-runtime@0.8.4':
     resolution: {integrity: sha512-HggROJhvHPUX7uqBD/XlajGygMNM1DG0+4OAkk8MBQe4a18QzrRNzZt6XQbRTSG4OaEoyRWhQHvYD3Yps405tQ==}
+
+  '@nanostores/react@0.8.4':
+    resolution: {integrity: sha512-EciHSzDXg7GmGODjegGG1VldPEinbAK+12/Uz5+MAdHmxf082Rl6eXqKFxAAu4pZAcr5dNTpv6wMfEe7XacjkQ==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    peerDependencies:
+      nanostores: ^0.9.0 || ^0.10.0 || ^0.11.0
+      react: '>=18.0.0'
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -1187,6 +1200,10 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  nanostores@0.11.3:
+    resolution: {integrity: sha512-TUes3xKIX33re4QzdxwZ6tdbodjmn3tWXCEc1uokiEmo14sI1EaGYNs2k3bU2pyyGNmBqFGAVl6jAGWd06AVIg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+
   needle@3.3.1:
     resolution: {integrity: sha512-6k0YULvhpw+RoLNiQCRKOl09Rv1dPLr8hHnVjHqdolKwDrdNyk+Hmrthi4lIGPPz3r39dLx0hsF5s40sZ3Us4Q==}
     engines: {node: '>= 4.4.x'}
@@ -2163,6 +2180,11 @@ snapshots:
     dependencies:
       '@module-federation/runtime': 0.8.4
       '@module-federation/sdk': 0.8.4
+
+  '@nanostores/react@0.8.4(nanostores@0.11.3)(react@18.3.1)':
+    dependencies:
+      nanostores: 0.11.3
+      react: 18.3.1
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -3323,6 +3345,8 @@ snapshots:
       thunky: 1.1.0
 
   nanoid@3.3.8: {}
+
+  nanostores@0.11.3: {}
 
   needle@3.3.1:
     dependencies:

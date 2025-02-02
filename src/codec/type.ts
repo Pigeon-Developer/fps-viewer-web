@@ -23,6 +23,10 @@ export interface LanguageConfig {
   append: string;
 }
 
+export type Language = {
+  [lang: string]: LanguageConfig;
+};
+
 export interface Problem {
   title: string;
   url: string;
@@ -45,9 +49,7 @@ export interface Problem {
   /**
    * 不同语言下的配置
    */
-  language: {
-    [lang: string]: LanguageConfig;
-  };
+  language: Language;
 
   remote: {
     oj: string;

@@ -1,0 +1,32 @@
+.comp {
+  display: block;
+  width: 300px;
+  height: 300px;
+
+  border: 4px dashed #999;
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: #333;
+  }
+
+  .input {
+    display: none;
+  }
+
+  .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    > div {
+      margin: 12px 0;
+    }
+  }
+}

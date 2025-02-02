@@ -16,7 +16,9 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@nanostores/react": "^0.8.4",
     "antd": "^5.23.3",
+    "nanostores": "^0.11.3",
     "normalize.css": "^8.0.1",
     "react": "18",
     "react-dom": "18"
