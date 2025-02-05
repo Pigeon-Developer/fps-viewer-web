@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Divider } from 'antd';
 import { Upload } from './component/upload';
 import { $problems, resetList } from './state';
 import { useStore } from '@nanostores/react';
 import { Problem } from './component/problem';
-import * as styles from './style.module.less';
 import { Download } from './component/download';
+import * as styles from './style.module.less';
 
 export function App() {
   const list = useStore($problems);
@@ -20,10 +20,10 @@ export function App() {
         </div>
         <div className={styles.list}>
           {list.map((data, index) => (
-            <>
-              <Divider className={styles.divider} />
-              <Problem key={index + data.title} data={data} />
-            </>
+            <Fragment key={index + '-' + data.title}>
+              <Divider key={index + '-divider'} className={styles.divider} />
+              <Problem key={index + '-data'} data={data} />
+            </Fragment>
           ))}
         </div>
       </div>
