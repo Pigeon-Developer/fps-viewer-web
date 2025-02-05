@@ -1,5 +1,5 @@
 import React from 'react';
-import { parseXML } from '../../codec';
+import { parse } from '../../codec/browser';
 import * as styles from './style.module.less';
 import { Problem } from 'src/codec/type';
 
@@ -19,7 +19,7 @@ async function readFile(file: File): Promise<string> {
 async function handleFile(file: File) {
   const content = await readFile(file);
 
-  return parseXML(content);
+  return parse(content);
 }
 
 interface Props {
